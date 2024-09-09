@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Manages Bills</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <!-- <link rel="shortcut icon" href="assets/images/favicon.ico"> -->
+
+    <!-- Plugins css -->
+    <!-- <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" /> -->
+
+    <!-- App css -->
+    <link href="assets/css2/bootstrap-creative.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+    <link href="assets/css2/app-creative.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+
+    <link href="assets/css2/bootstrap-creative-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet"
+        disabled />
+    <link href="assets/css2/app-creative-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet"
+        disabled />
+
+    <!-- icons -->
+    <link href="assets/css2/icons.min.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body data-layout-mode="detached"
+    data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": true}, "topbar": {"color": "dark"}, "showRightSidebarOnPageLoad": true}'>
+    <!-- Begin page -->
+    <div id="wrapper">
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <div class="container-fluid">
+                <ul class="list-unstyled topnav-menu float-right mb-0">
+
+                    <!-- All-->
+
+                    <li class="dropdown notification-list topbar-dropdown">
+                        <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light"
+                            data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/images/users/user-1.jpg" alt="user-image" class="rounded-circle" />
+                            <span class="pro-user-name ml-1">
+                                Geneva <i class="mdi mdi-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                            <!-- item-->
+                            <div class="dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">Welcome !</h6>
+                            </div>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="fe-user"></i>
+                                <span>My Account</span>
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="fe-log-out"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="index.html" class="logo logo-dark text-center">
+                        <span class="logo-sm">
+                            <img src="assets/images/logo-sm.png" alt="" height="22" />
+                            <!-- <span class="logo-lg-text-light">UBold</span> -->
+                        </span>
+                        <span class="logo-lg">
+                            <img src="assets/images/logo-dark.png" alt="" height="20" />
+                            <!-- <span class="logo-lg-text-light">U</span> -->
+                        </span>
+                    </a>
+
+                    <a href="index.html" class="logo logo-light text-center">
+                        <span class="logo-sm">
+                            <img src="assets/images/logo-sm.png" alt="" height="22" />
+                        </span>
+                        <span class="logo-lg">
+                            <img src="assets/images/logo-light.png" alt="" height="20" />
+                        </span>
+                    </a>
+                </div>
+
+                <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                    <li>
+                        <button class="button-menu-mobile waves-effect waves-light">
+                            <i class="fe-menu"></i>
+                        </button>
+                    </li>
+
+                    <li>
+                        <!-- Mobile menu toggle (Horizontal Layout)-->
+                        <a class="navbar-toggle nav-link" data-toggle="collapse" data-target="#topnav-menu-content">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- end Topbar -->
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+            <div class="h-100" data-simplebar>
+                <!-- User box -->
+                <div class="user-box text-center">
+                    <img src="assets/images/users/user-1.jpg" alt="user-img" title="Mat Helme"
+                        class="rounded-circle avatar-md" />
+                </div>
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <ul id="side-menu">
+                        <a href="dashboard.html" class="text-dark h5 mt-3 mb-1 ml-3 d-block">Dashboard</a>
+                        <li class="menu-title mt-2">INVENTORY</li>
+
+                        <li>
+                            <a href="#sidebarEcommerce" data-toggle="collapse">
+                                <i data-feather="users"></i>
+                                <span> Parties </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarEcommerce">
+                                <ul class="nav-second-level">
+                                    <li>
+                                        <a href="addclient.html"><i data-feather="plus" class="pr-0 mr-1"></i>Add
+                                            New</a>
+                                    </li>
+                                    <li>
+                                        <a href="manageParties.html"><i data-feather="list" class="pr-0 mr-1"></i>Manage
+                                            Parties</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#sidebarCrm" data-toggle="collapse">
+                                <i data-feather="edit"></i>
+                                <span> GST Billing </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarCrm">
+                                <ul class="nav-second-level">
+                                    <li>
+                                        <a href="gstbill.html"><i data-feather="plus" class="pr-0 mr-1"></i>Create
+                                            bill</a>
+                                    </li>
+                                    <li>
+                                        <a href="managebills.html"><i data-feather="list" class="pr-0 mr-1"></i>Manage
+                                            all
+                                            bills</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Sidebar -->
+
+                <div class="clearfix"></div>
+            </div>
+            <!-- Sidebar -left -->
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+        <!-- start page title -->
+        <div class="content-page">
+            <div class="row">
+                <div class="col">
+                    <div class="page-title-box">
+                        <h2 class="page-title font-weight-bold text-uppercase">Manage Bills</h2>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card-box">
+                        <a href="gstbill.html" class="btn btn-sm btn-blue waves-effect waves-light float-right">
+                            <i class="mdi mdi-plus-circle"></i> Create New Bill
+                        </a>
+                        <h4 class="header-title mb-4 text-uppercase">Manage Bills</h4>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-10">
+                                <div class="dataTables_length" id="alternative-page-datatable_length"><label>Show
+                                        <select name="alternative-page-datatable_length"
+                                            aria-controls="alternative-page-datatable"
+                                            class="custom-select custom-select-sm form-control form-control-sm">
+                                            <option value="10">10</option>
+                                            <option value="25">25</option>
+                                            <option value="50">50</option>
+                                            <option value="100">100</option>
+                                        </select> entries</label></div>
+                            </div>
+                            <div class="col-sm-12 col-md-2">
+                                <div id="alternative-page-datatable_filter" class="dataTables_filter">
+                                    <label>Search:<input type="search" class="form-control form-control-sm"
+                                            placeholder="" aria-controls="alternative-page-datatable"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table table-hover m-0 table-centered dt-responsive nowrap w-100 table-bordered"
+                            id="tickets-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        S.No.
+                                    </th>
+                                    <th>Bill No</th>
+                                    <th>Cielnt's Info</th>
+                                    <th>Billing Info</th>
+                                    <th>Date</th>
+                                    <th class="hidden-sm">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><b>#1256</b></td>
+                                    <td>
+                                        #5
+                                    </td>
+
+                                    <td>
+                                        Joh Doe
+                                    </td>
+
+                                    <td>
+                                        <ul class="list-unstyled">
+                                            <li><b>Total Amount :</b><span> 555</span></li>
+                                            <li><b>TAX :</b><span> 55</span></li>
+                                            <li><b>Net Amount :</b><span> 55</span></li>
+                                        </ul>
+                                    </td>
+
+                                    <td>
+                                        01/09/2023
+                                    </td>
+                                    <td>
+                                        <div class="btn-group dropdown">
+                                            <a href="javascript: void(0);"
+                                                class="table-action-btn dropdown-toggle arrow-none btn btn-light btn-sm"
+                                                data-toggle="dropdown" aria-expanded="false"><i
+                                                    class="mdi mdi-dots-horizontal"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <button type="button" class="dropdown-item" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal"><i
+                                                        class="mdi mdi-alert-octagon-outline mr-2 text-muted font-18 vertical-middle"></i>Detail</button>
+                                                <a class="dropdown-item" href="#"><i
+                                                        class="mdi mdi-delete mr-2 text-muted font-18 vertical-middle"></i>Delete</a>
+                                                <a class="dropdown-item" href="printGST_bill.html"><i
+                                                        class="mdi mdi-printer mr-2 text-muted font-18 vertical-middle"></i>
+                                                    Print</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- end col -->
+                </div>
+            </div>
+            <!-- end row -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-body p-1">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card-box m-0">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="m-1"><b>Date : </b>01/09/2023</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="m-1 float-right"><b>Bill No. : </b>#01</p>
+                                            </div>
+                                        </div>
+                                        <div class="border-top"></div>
+                                        <div class="row pt-1">
+                                            <div class="col-6">
+                                                <p class="m-1"><b>Customer Name : </b>John Doe</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="m-1 float-right"><b>Phone No. : </b>9865320159</p>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="border-bottom"></div> -->
+
+                                        <!-- Logo & title -->
+
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <div class="table-responsive table-bordered">
+                                                    <table class="table mt-0 table-centered border">
+                                                        <thead>
+                                                            <tr>
+
+                                                                <th class="py-0"
+                                                                    style="background-color: rgb(130, 210, 241); color: black;">
+                                                                    DESCRIPTION</th>
+                                                                <th style="width: 15%; background-color: rgb(130, 210, 241); color: black;"
+                                                                    class="text-center py-1">
+                                                                    AMOUNT
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+
+                                                                <td>
+                                                                    <b>Web Design</b> <br />
+                                                                    2 Pages static website - my website
+                                                                </td>
+                                                                <td class="text-center">$660.00</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div> <!-- end table-responsive -->
+                                            </div> <!-- end col -->
+                                        </div>
+                                        <!-- end row -->
+
+                                        <div class="row border">
+                                            <div class="col-sm-12 col-lg-12 mt-1">
+                                                <ul class="list-unstyled float-right">
+                                                    <li><b>Total Amount :</b> <span class="float-right"><i
+                                                                class="fas fa-rupee-sign ml-2"></i> 0.00</span></li>
+
+                                                    <li><b>TAX :</b><span class="float-right"><i
+                                                                class="fas fa-rupee-sign"></i> 0.00</span>
+                                                    </li>
+                                                    <li><b>Net Amount :</b><span class="float-right"><i
+                                                                class="fas fa-rupee-sign"></i> 0.00</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="clearfix"></div>
+                                            </div> <!-- end col -->
+                                        </div>
+                                        <!-- end row -->
+
+                                    </div> <!-- end card-box -->
+                                </div> <!-- end col -->
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="printGST_bill.html" class="btn btn-primary waves-effect waves-light">Print
+                                <i class="mdi mdi-printer mr-1"></i></a>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            2015 -
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            &copy; UBold theme by <a href="">Coderthemes</a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-md-right footer-links d-none d-sm-block">
+                                <a href="javascript:void(0);">About Us</a>
+                                <a href="javascript:void(0);">Help</a>
+                                <a href="javascript:void(0);">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+        </div>
+        <!-- Right bar overlay-->
+
+        <!-- Vendor js -->
+        <script src="assets/js2/vendor.min.js"></script>
+
+        <!-- Plugins js-->
+        <script src="assets/libs2/flatpickr/flatpickr.min.js"></script>
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+        <!-- Dashboar 1 init js-->
+        <script src="assets/js2/pages/dashboard-1.init.js"></script>
+
+        <!-- App js-->
+        <script src="assets/js2/app.min.js"></script>
+
+        <!-- Bootstrap js  -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
